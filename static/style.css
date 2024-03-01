@@ -204,42 +204,19 @@ aside .sidebar a:hover {
 }
 
 main {
-    margin-top: 3.4em;
+    margin-top: 3em;
     
     justify-content: center;
 }
 
-main .choose-languages {
-    gap: 1.6rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
-main .language-btn {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    background-color: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--box-shadow);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-main .language-btn:hover {
-    transition: all 0.3s ease;
-    box-shadow: none;
-}
-
-main .guessing-words {
+main .job-offers {
     margin-top: 3.4rem;
-    
+    display: grid;
+    grid-template-columns: auto 7rem;
+    gap: 1.6rem;
 }
 
-main .guessing-words .guess{
+main .job-offers .job-title{
     color: var(--color-white);
     background-color: var(--color-accent);
     padding: var(--card-padding);
@@ -248,24 +225,41 @@ main .guessing-words .guess{
     box-shadow: var(--box-shadow);
     cursor: pointer;
     transition: all 0.3s ease;
-    text-align: center;
+    text-align: left;
     font-size: large;
 }
 
-main .guessing-words .guess:hover {
+main .job-offers .job-title:hover {
     box-shadow: none;
+    color: var(--color-primary);
 }
 
-main .guessing-words .guesses {
+main .job-offers .apply {
     font-size: medium;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.4rem;
+    display: inline-block;
     cursor: pointer;
-    text-align: center;
+    text-align: left;
+    background-color: var(--color-primary);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
 }
 
-main .guessing-words .guesses > div {
+main .job-offers .apply:hover {
+    box-shadow: none;
+    color: var(--color-background);
+}
+
+main .job-offers .content {
+    display: inline-block;
+}
+
+main .job-offers .content .details {
+    font-size: medium;
+    cursor: pointer;
+    text-align: left;
     background-color: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
@@ -274,35 +268,8 @@ main .guessing-words .guesses > div {
     transition: all 0.3s ease;
 }
 
-main .guessing-words .guesses > div:hover {
+main .job-offers .content .details:hover {
     box-shadow: none;
-}
-
-main .user-rating {
-    margin-top: 3.4rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-main .user-rating > div span {
-    font-size: 3rem;
-    transition: all 0.3s ease;
-}
-main .user-rating > div span:hover {
-    font-size: 4rem;
-}
-
-main .user-rating .easy span{
-    color: var(--color-success);
-}
-
-main .user-rating .hard {
-    color: var(--color-warning);
-}
-
-main .user-rating .extreme {
-    color: var(--color-danger);
 }
 
 .right-section {
