@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %} | Karola-ING</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <span class="material-symbols-outlined" id="logo">
+                        style
+                        </span>
+                    <h2><a href="#">Job Database</a></h2>
+                </div>
+                <div class="close" id="blose-btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        book
+                    </span>
+                    <h3>Job Hunt</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        query_stats
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                
+            </div>
+        </aside>
+        <!-- End of sidebar section -->
+
+        <!-- Main content -->
+        <main>
+
+            {% block content %}
+            {% endblock %}
+
+        </main>
+        <!-- End of main content -->
+
+        <!-- Right section -->
+        <div class="right-section">
+            <div class="nav">
+                <button class="menu-btn">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+            
+                <div class="dark-mode">
+                    <span class="material-symbols-outlined active">
+                        light_mode
+                    </span>
+                    <span class="material-symbols-outlined">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hello, <strong>Karolina</strong></p>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/static/smilling-woman.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of right section -->
+
+
+
+    </div>
+
+    <script src="/static/index.js"></script>
+</body>
+</html>

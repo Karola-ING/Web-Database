@@ -205,7 +205,6 @@ aside .sidebar a:hover {
 
 main {
     margin-top: 3em;
-    
     justify-content: center;
 }
 
@@ -263,7 +262,6 @@ main .job-offers .content .details {
     background-color: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
-    margin-top: 1rem;
     box-shadow: var(--box-shadow);
     transition: all 0.3s ease;
 }
