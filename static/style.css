@@ -59,6 +59,7 @@ body {
 
 a {
     color: var(--color-dark);
+    text-decoration: none;
 }
 
 img {
@@ -90,7 +91,7 @@ b {
     color: var(--color-dark);
 }
 
-.container {
+.main-container {
     display: grid;
     width: 96%;
     margin: 0 auto;
@@ -209,7 +210,7 @@ main {
 }
 
 main .job-offers {
-    margin-top: 3.4rem;
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: auto 7rem;
     gap: 1.6rem;
@@ -238,6 +239,7 @@ main .job-offers .apply {
     display: inline-block;
     cursor: pointer;
     text-align: left;
+    color: var(--color-white);
     background-color: var(--color-primary);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
@@ -248,25 +250,28 @@ main .job-offers .apply {
 
 main .job-offers .apply:hover {
     box-shadow: none;
-    color: var(--color-background);
+    color: var(--color-accent);
 }
 
 main .job-offers .content {
     display: inline-block;
+    padding-top: 5rem;
+    margin-top: -5rem;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    z-index: -9;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
 }
 
 main .job-offers .content .details {
     font-size: medium;
     cursor: pointer;
     text-align: left;
-    background-color: var(--color-white);
     padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--box-shadow);
-    transition: all 0.3s ease;
 }
 
-main .job-offers .content .details:hover {
+main .job-offers .content:hover {
     box-shadow: none;
 }
 
@@ -328,3 +333,30 @@ main .job-offers .content .details:hover {
     overflow: hidden;
 }
 
+.right-section .user-profile{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .user-profile:hover{
+    box-shadow: none;
+}
+
+.right-section .user-profile img{
+    width: 11rem;
+    height: auto;
+    margin-bottom: 0.8rem;
+    border-radius: 50%;
+}
+
+.right-section .user-profile h2{
+    margin-bottom: 0.2rem;
+}

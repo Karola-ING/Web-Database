@@ -27,8 +27,12 @@ JOBS = [
 ]
 
 @app.route('/')
-def hello():
+def home():
     return render_template('jobs.html', jobs=JOBS)
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True, port=8000)
