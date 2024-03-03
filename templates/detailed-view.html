@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block content %}
-    {% for job in jobs %}
     <div class="job-offers">
         <div class="job-title">
           <a href="{{ "/jobs/" + (job['job_id']|string) }}">{{job['job_title']}}</a>
@@ -21,9 +20,16 @@
                 <div class="salary">
                     {{job['salary']}} {{ job['currency']}}
                 </div>
+                <br />
+                <div class="responsibilities">
+                    <strong>Responsibilities:</strong> {{job['responsibilities']}}
+                </div>
+                <br />
+                <div class="requirements">
+                    <strong>Requirements:</strong> {{job['requirements']}}
+                </div>
             </div>
         </div>
     </div>
-    {% endfor %}
     
 {% endblock %}

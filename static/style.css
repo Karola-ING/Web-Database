@@ -229,6 +229,14 @@ main .job-offers .job-title{
     font-size: large;
 }
 
+main .job-offers .job-title a{
+    color: var(--color-white);
+}
+
+main .job-offers .job-title a:hover {
+    color: var(--color-primary);
+}
+
 main .job-offers .job-title:hover {
     box-shadow: none;
     color: var(--color-primary);
@@ -264,6 +272,10 @@ main .job-offers .content {
     transition: all 0.3s ease;
 }
 
+main .job-offers .content:hover {
+    box-shadow: none;
+}
+
 main .job-offers .content .details {
     font-size: medium;
     cursor: pointer;
@@ -271,8 +283,13 @@ main .job-offers .content .details {
     padding: var(--card-padding);
 }
 
-main .job-offers .content:hover {
-    box-shadow: none;
+main .job-offers .content .details .salary{
+    color: var(--color-success);
+    font-weight: 600;
+}
+
+main .job-offers .content .details .location{
+    color: var(--color-dark-variant);
 }
 
 .right-section {
