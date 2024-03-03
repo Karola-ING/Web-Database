@@ -118,8 +118,8 @@ aside .toggle .logo {
 aside .toggle .logo span{
     color: var(--color-white);
     position: relative;
-    margin-left: -55px;
-    margin-top: 15px;
+    margin-left: -53px;
+    margin-top: 13px;
 }
 
 aside .toggle .logo h2 {
@@ -205,12 +205,11 @@ aside .sidebar a:hover {
 }
 
 main {
-    margin-top: 3em;
+    margin-top: 7.4em;
     justify-content: center;
 }
 
 main .job-offers {
-    margin-top: 3rem;
     display: grid;
     grid-template-columns: auto 7rem;
     gap: 1.6rem;
@@ -221,7 +220,6 @@ main .job-offers .job-title{
     background-color: var(--color-accent);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
-    margin-top: 1rem;
     box-shadow: var(--box-shadow);
     cursor: pointer;
     transition: all 0.3s ease;
@@ -242,34 +240,38 @@ main .job-offers .job-title:hover {
     color: var(--color-primary);
 }
 
-main .job-offers .apply {
+button {
     font-size: medium;
-    display: inline-block;
     cursor: pointer;
     text-align: left;
     color: var(--color-white);
     background-color: var(--color-primary);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
-    margin-top: 1rem;
     box-shadow: var(--box-shadow);
     transition: all 0.3s ease;
 }
 
-main .job-offers .apply:hover {
+button:hover {
     box-shadow: none;
     color: var(--color-accent);
 }
 
-main .job-offers .content {
-    display: inline-block;
-    padding-top: 5rem;
-    margin-top: -5rem;
+main .job-offers .content, main .content {
+    display: grid;
+    padding: var(--card-padding);
     background-color: var(--color-white);
     border-radius: var(--card-border-radius);
+    border-top: 3px solid var(--color-accent);
     z-index: -9;
     box-shadow: var(--box-shadow);
     transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+main .job-offers .content {
+    padding-top: 5rem;
+    margin-top: -5rem;
 }
 
 main .job-offers .content:hover {
@@ -280,15 +282,14 @@ main .job-offers .content .details {
     font-size: medium;
     cursor: pointer;
     text-align: left;
-    padding: var(--card-padding);
 }
 
-main .job-offers .content .details .salary{
+.salary{
     color: var(--color-success);
     font-weight: 600;
 }
 
-main .job-offers .content .details .location{
+.location{
     color: var(--color-dark-variant);
 }
 
@@ -376,4 +377,56 @@ main .job-offers .content .details .location{
 
 .right-section .user-profile h2{
     margin-bottom: 0.2rem;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: var(--color-white);
+    border-radius: var(--card-border-radius);
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: var(--color-light);
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid var(--color-white);
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: var(--color-success);
+  color: var(--color-white);
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.error {
+    color: var(--color-danger);
 }

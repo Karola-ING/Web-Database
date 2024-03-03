@@ -1,32 +1,24 @@
 {% extends 'layout.html' %}
 
 {% block header %}
-  <h1>{% block title %}Jobs{% endblock %}</h1>
+  <h1>{% block title %}Dashboard{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
     {% for job in jobs %}
-    <div class="job-offers">
-        <div class="job-title">
-            {{job['title']}}
-        </div>
-        <div class="apply">
-            Apply
-        </div>
         <div class="content">
             <div class="details">
-                <div class="company">
-                {{job['company']}}
+                <div class="title">
+                  <h2><a href="{{ "/jobs/" + (job['job_id']|string) }}">{{job['job_title']}}</a></h2>
                 </div>
                 <div class="location">
-                    {{job['location']}}
+                    {{job['job_location']}}
                 </div>
                 <div class="salary">
-                    {{job['salary']}}
+                    {{job['salary']}} {{ job['currency']}}
                 </div>
             </div>
         </div>
-    </div>
     {% endfor %}
     
 {% endblock %}

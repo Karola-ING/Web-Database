@@ -28,23 +28,17 @@
             </div>
 
             <div class="sidebar">
-                <a href="#" target="_blank">
+                <a href="{{ url_for('dashboard') }}">
                     <span class="material-symbols-outlined">
                         dashboard
                     </span>
-                    <h3>Dashboard</h3>
+                    <h3>My applications</h3>
                 </a>
-                <a href="{{ url_for('home') }}" target="_blank">
+                <a href="{{ url_for('home') }}">
                     <span class="material-symbols-outlined">
                         book
                     </span>
                     <h3>Job Hunt</h3>
-                </a>
-                <a href="#">
-                    <span class="material-symbols-outlined" target="_blank">
-                        query_stats
-                    </span>
-                    <h3>Analytics</h3>
                 </a>
                 
             </div>
@@ -89,13 +83,6 @@
             </div>
         </div>
         <!--End of right section -->
-
-        <div class="user-profile">
-            <div class="logo">
-                <h2>Karolina</h2>
-                <p>Fullstack Web Developer</p>
-            </div>
-        </div>
     </div>
 
     <!--Footer -->

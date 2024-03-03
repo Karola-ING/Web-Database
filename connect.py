@@ -34,6 +34,25 @@ def execute_select(statement, variables=None, fetchall=True):
     return result_set
 
 
+def execute_insert(statement, variables=None):
+    """
+    Execute data manipulation query statement (optionally parameterized)
+
+    :statment: SQL statement
+
+    :variables:  optional parameter dict"""
+    result = None
+    config = load_config()
+    with connect(config) as conn:
+        with conn.cursor() as cursor:
+            cursor.execute(statement, variables)
+            try:
+                result = cursor.fetchone()
+            except psycopg2.ProgrammingError as pe:
+                pass
+    return result
+
+
 if __name__ == '__main__':
     config = load_config()
     connect(config)

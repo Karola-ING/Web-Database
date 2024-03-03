@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block header %}
-  <h1>{% block title %}Jobs{% endblock %}</h1>
+  <h1>{% block title %}{{job['job_title']}}{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
@@ -9,9 +9,12 @@
         <div class="job-title">
           <a href="{{ "/jobs/" + (job['job_id']|string) }}">{{job['job_title']}}</a>
         </div>
-        <div class="apply">
-            Apply
-        </div>
+        <form method="post" action="{{ "/jobs"}}">
+            <input type="hidden" name="add_item_index" value="{{ (job['job_id']|string) }}">
+            <button class="apply" type="submit" name="add_item">
+                Apply
+            </button>
+        </form>
         <div class="content">
             <div class="details">
                 <div class="location">
@@ -22,11 +25,21 @@
                 </div>
                 <br />
                 <div class="responsibilities">
-                    <strong>Responsibilities:</strong> {{job['responsibilities']}}
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                    {% for line in job['responsibilities'].split("\n") %}
+                        <li>{{ line }}</li>
+                    {% endfor %}
+                    </ul>
                 </div>
                 <br />
                 <div class="requirements">
-                    <strong>Requirements:</strong> {{job['requirements']}}
+                    <p><strong>Requirements:</strong></p>
+                    <ul>
+                    {% for line in job['requirements'].split("\n") %}
+                        <li>{{ line }}</li>
+                    {% endfor %}
+                    </ul>
                 </div>
             </div>
         </div>

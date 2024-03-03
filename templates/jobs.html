@@ -10,9 +10,12 @@
         <div class="job-title">
           <a href="{{ "/jobs/" + (job['job_id']|string) }}">{{job['job_title']}}</a>
         </div>
-        <div class="apply">
-            Apply
-        </div>
+        <form method="post" action="{{ "/jobs"}}">
+            <input type="hidden" name="add_item_index" value="{{ (job['job_id']|string) }}">
+            <button class="apply" type="submit" name="add_item">
+                Apply
+            </button>
+        </form>
         <div class="content">
             <div class="details">
                 <div class="location">

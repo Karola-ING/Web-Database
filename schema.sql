@@ -8,6 +8,18 @@ CREATE TABLE jobs (
   requirements VARCHAR(2000)
 );
 
+CREATE TABLE dashboard (
+  apply_id SERIAL PRIMARY KEY,
+  job_id INT NOT NULL,
+  apply_date DATE NOT NULL
+);
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  user_password VARCHAR (50) NOT NULL,
+  user_name VARCHAR (25) NOT NULL
+);
+
 INSERT INTO jobs (job_title, job_location, salary, currency, responsibilities, requirements)
 VALUES  ('Frontend Developer','Remote', 12000, 'PLN','Translate designs and wireframes into high quality JS, CSS, HTML templates
 Design, build, and maintain high performance, reusable, and reliable UI components and products
